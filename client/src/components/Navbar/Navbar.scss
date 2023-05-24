@@ -1,0 +1,214 @@
+@use '../../scss/config/variables.scss' as *;
+@use '../../scss/config/mixins' as *;
+
+.header_2 {
+  display: none;
+}
+.scrolled {
+  background-color: #ffffffe9;
+}
+.header,
+.header_2 {
+  // background-color: $body-color;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: $z-fixed;
+  transition: 0.5s;
+
+  .nav {
+    position: relative;
+    min-height: 6rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .item {
+      display: flex;
+      align-items: center;
+      // font-size: clamp(0.4rem, 0.6rem + 0.8vw, 1.5rem);
+      font-size: $heading-m;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    .left {
+      color: $first-color;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .center {
+      font-family: 'Raleway', sans-serif;
+      // font-size: clamp(0.4rem, 0.3rem + 1.3vw, 3rem);
+      font-size: $heading-l;
+      letter-spacing: 0.5rem;
+      margin-left: 10rem;
+
+      .link {
+        color: black;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.9rem;
+
+      .mr-1 {
+        display: flex;
+        gap: 1rem;
+        padding-right: 1.6rem;
+        border-right: 1px solid $second-color;
+      }
+      .link {
+        color: $first-color;
+        transition: 0.6s ease;
+
+        &:hover {
+          color: #8563ff;
+          // color: #ffc8c8;
+          transition: 0.2s;
+        }
+      }
+
+      .icons {
+        display: flex;
+        align-items: center;
+        color: $first-color;
+        cursor: pointer;
+        gap: 0.9rem;
+
+        @include cartCount;
+      }
+    }
+    .icon-small {
+      font-size: $heading-m;
+    }
+
+    @media screen and (max-width: 768px) {
+      .show-menu {
+        top: 5rem;
+      }
+
+      .close {
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+
+      &__menu {
+        // display: none;
+        position: fixed;
+        background-color: #ffffffe9;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        padding: 2.5rem 0;
+        width: 90%;
+        top: -100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transition: 0.4s;
+        border-radius: 2rem;
+        z-index: $z-fixed;
+      }
+      &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.5rem;
+      }
+      &__link {
+        font-family: 'Poppins', sans-serif;
+        font-size: $heading-s;
+        // font-weight: 400;
+        color: #000;
+      }
+
+      &__drop {
+        font-size: $heading-s;
+        // font-weight: normal;
+        color: black;
+        display: flex;
+        align-items: center;
+      }
+      &__wrapper {
+        display: flex;
+        gap: 1.4rem;
+        align-items: center;
+
+        .icons {
+          gap: 0.5rem;
+          display: flex;
+          @include cartCount;
+        }
+      }
+      &__toogle {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .scrolled {
+    background-color: #ffffffe9;
+  }
+  .header {
+    display: none;
+  }
+  .header_2 {
+    display: block;
+  }
+}
+
+.drop-equipments {
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  background-color: white;
+  padding: 2rem 0.8rem 3rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid gray;
+  color: $second-color;
+  transition: 0.6s ease;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    li {
+      a {
+        transition: 0.2s ease;
+        color: black;
+
+        &:hover {
+          text-decoration: underline;
+          color: #8563ff;
+        }
+      }
+
+      padding: 5px 15px;
+      border-radius: 4px;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -0.45rem;
+    left: 1.2rem;
+    width: 13px;
+    height: 13px;
+    transform: rotate(45deg);
+    background-color: #fff;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+  }
+}

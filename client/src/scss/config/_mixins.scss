@@ -1,0 +1,23 @@
+@use './variables' as *;
+
+@mixin cartCount() {
+  .cartIcon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .cartSpan {
+      font-size: 12px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background-color: $second-color;
+      color: #ffff;
+      position: absolute;
+      right: -10px;
+      top: -10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

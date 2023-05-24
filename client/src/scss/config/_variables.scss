@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+// VARIABLES
+// COLORS ->
+$hue: 45;
+$sat: 98%;
+$first-color-light: hsl($hue, $sat, 85%);
+$first-color-lighten: hsl($hue, $sat, 80%);
+$first-color-alt: hsl($hue, $sat, 53%);
+$title-color: hsl(189, 82%, 16%);
+$text-color: hsl(197, 82%, 22%);
+$text-color-light: hsl(197, 82%, 27%);
+$body-color: #fff;
+$container-color: #fff;
+$scroll-bar-color: hsl($hue, 4%, 85%);
+$scroll-thumb-color: hsl(189, 82%, 16%);
+
+$first-color: hsl(197, 82%, 22%);
+$second-color: hsl(189, 82%, 16%);
+$third-color: hsl(189, 100%, 89%);
+$fourth-color: hsl(189, 100%, 77%);
+
+//  FONTS & TYPOGRAPHY ->
+$body-font: 'Poppins', 'sans-serif';
+
+$biggest-font-size: 2rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1.125rem;
+$normal-font-size: 0.938rem;
+$small-font-size: 0.813rem;
+$smaller-font-size: 0.75rem;
+
+// Responsive typo ->
+@media screen and (min-width: 978px) {
+  $heading-l: 3rem;
+  $heading-m: 1.75rem;
+  $heading-s: 1.25rem;
+  $text-l: 1rem;
+  $text-m: 0.875rem;
+  $text-s: 0.813rem;
+}
+
+$heading-s: 1.125rem;
+$heading-m: 1.25rem;
+$heading-l: 2rem;
+
+$text-s: 0.75rem;
+$text-m: 0.813rem;
+$text-l: 0.938rem;
+
+$font-b: 700;
+$font-m: 600;
+$font-l: 400;
+
+// FONT WEIGHT ->
+$font-sb: 600;
+$font-b: 700;
+
+// MARGENES ->
+$mb-0-5: 0.5rem;
+$mb-0-75: 0.75rem;
+$mb-1: 1rem;
+$mb-1-5: 1.5rem;
+$mb-2: 2rem;
+
+// Z - INDEX ->
+$z-tooltip: 10;
+$z-fixed: 100;
